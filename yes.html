@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>She said YES 💖</title>
+
+<style>
+:root{
+  --pink1:#ffd6e7;
+  --pink2:#ffb3c6;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(to bottom,var(--pink1),var(--pink2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:system-ui,sans-serif;
+  overflow:hidden;
+}
+
+/* FLOATING HEARTS (same as index.html) */
+.heart{
+  position:absolute;
+  bottom:-20px;
+  font-size:28px;
+  opacity:.35;
+  animation:floatUp 12s linear infinite;
+}
+
+@keyframes floatUp{
+  0%{transform:translateY(0) translateX(0)}
+  100%{transform:translateY(-120vh) translateX(30px)}
+}
+
+/* CARD */
+.card{
+  width:min(520px,92vw);
+  padding:30px 24px;
+  background:#ffffffcc;
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,.15);
+  position:relative;
+  z-index:2;
+}
+
+/* BREATHING EMOJI */
+.breathe{
+  display:inline-block;
+  font-size:48px;
+  animation:breathe 2.8s ease-in-out infinite;
+}
+
+@keyframes breathe{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.15)}
+}
+
+h2{
+  margin:16px 0 12px;
+}
+
+p{
+  font-size:14px;
+  line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEARTS -->
+<script>
+for(let i=0;i<35;i++){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=8+Math.random()*6+"s";
+  document.body.appendChild(h);
+}
+</script>
+
+<div class="card">
+  <div class="breathe">😊</div>
+  <div class="breathe">🌸</div>
+  <div class="breathe">💗</div>
+
+  <h2>Yay! She said YES 💞</h2>
+
+  <p>
+    Fulku 💖<br><br>
+    This moment just became a beautiful memory ✨<br><br>
+    Thank you for saying yes and making my heart the happiest.<br>
+    Thank you for being my buddy, my love, my best friend.<br>
+    I promise to cherish you today, tomorrow, and always ❤️
+  </p>
+</div>
+
+</body>
+</html>
